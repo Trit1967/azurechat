@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
@@ -39,19 +40,19 @@
       "value": "text-embedding-ada-002"
     },
     "dalleLocation": {
-      "value": "${AZURE_DALLE_LOCATION}"
+      "value": ""
     },
     "dalleDeploymentCapacity": {
-      "value": 1
+      "value": 0
     },
     "dalleDeploymentName": {
-      "value": "dall-e-3"
+      "value": ""
     },
     "dalleModelName": {
-      "value": "dall-e-3"
+      "value": ""
     },
     "dalleApiVersion": {
-      "value": "2023-12-01-preview"
+      "value": ""
     },
     "formRecognizerSkuName": {
       "value": "S0"
