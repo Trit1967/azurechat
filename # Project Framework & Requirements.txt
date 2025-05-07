@@ -1,0 +1,60 @@
+# Project Framework & Requirements
+
+This doc covers what tech stack this project uses, what tools you’ll need to work with it, and the Azure permissions it requires. If you’re planning to build, customize, or deploy it, this should save you time.
+
+---
+
+## 🔧 Tech Stack Overview
+
+### Frontend
+- **React** is used to build the UI.
+- **Tailwind CSS** handles the styling.
+- The frontend is written in **TypeScript**, running on **Node.js 18+**.
+
+### Backend
+- Built with **Python** (3.9–3.11 supported).
+- It likely uses FastAPI or Flask (Microsoft’s similar samples go this route).
+
+### Infra & Deployment
+- **Bicep** is used for infrastructure-as-code.
+- **Azure Developer CLI (`azd`)** handles provisioning and deployment.
+- You can host it on **Azure Container Apps** (default) or **App Service**.
+
+---
+
+## 🧰 Setup Tools You’ll Need
+
+To get started locally or through a dev container:
+
+- [ ] Python (3.9 to 3.11)
+- [ ] Node.js (18+)
+- [ ] Git
+- [ ] PowerShell 7+ (Windows only)
+- [ ] Azure Developer CLI (`azd`)
+- [ ] Docker (if using VS Code Dev Containers)
+- [ ] VS Code + Dev Containers extension (optional)
+
+---
+
+## 🔐 Azure Permissions Needed
+
+Depending on how you’re deploying, you’ll need these permissions in your Azure subscription or a resource group:
+
+| Permission | Why It’s Needed |
+|------------|-----------------|
+| `Microsoft.Authorization/roleAssignments/write` | Assigns roles like Key Vault access |
+| `Microsoft.Resources/deployments/write` | Handles ARM/Bicep deployments |
+| `Microsoft.App/containerApps/*` | Manages Container Apps (default host) |
+| `Microsoft.Web/sites/*` | Required if you deploy to App Service |
+| `Microsoft.CognitiveServices/accounts/*` | For the Azure OpenAI resource |
+| `Microsoft.Search/searchServices/*` | Powers AI Search indexing |
+| `Microsoft.Storage/storageAccounts/*` | For blob storage of ingested data |
+| `Microsoft.DocumentDB/databaseAccounts/*` | Optional – if you enable chat history with Cosmos DB |
+| `Microsoft.KeyVault/vaults/*` | Stores API keys and secrets |
+| `Microsoft.Monitor/*` | Needed if you want to track app usage or logs |
+
+If you don’t have Owner or User Access Administrator roles, make sure someone grants you RBAC on the resource group you’re using.
+
+---
+
+#
