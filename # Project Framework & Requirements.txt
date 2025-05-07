@@ -2,6 +2,7 @@
 
 This doc covers what tech stack this project uses, what tools you’ll need to work with it, and the Azure permissions it requires. If you’re planning to build, customize, or deploy it, this should save you time.
 
+https://capps-backend-evvy3sfudpeoe.politestone-6f84ddb9.westus2.azurecontainerapps.io
 ---
 
 ## 🔧 Tech Stack Overview
